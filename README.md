@@ -18,11 +18,11 @@ This fun project is created to fetch most recent videos for all the youtube chan
 
 Sample format for "CHANNEL_CATEGORIES" variable:
 
-![a relative link](images/channel_obj_structure.jpg?raw=true)
+![a relative link](images/channel_obj_structure.JPG)
 
 ## Sample Output Text File
 
-![a relative link](images/out_file_structure.jpg?raw=true)
+![a relative link](images/out_file_structure.JPG)
 
 ## Pending Enhancements
 
