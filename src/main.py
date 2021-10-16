@@ -12,7 +12,7 @@ def main():
         channel_category_videos = rest_functions.get_channel_category_videos(channel_list)
         file_txt += helper_functions.generate_file_content(channel_category, channel_category_videos)
 
-    helper_functions.write_to_text_file(file_txt, 'out')
+    helper_functions.write_to_text_file(file_txt, 'out') 
 
 
 if __name__ == "__main__":

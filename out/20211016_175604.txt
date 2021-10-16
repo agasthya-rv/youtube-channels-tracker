@@ -1,0 +1,11 @@
+******** PERSONAL_FINANCE ********
+YouTube_Channel1
+Video Title 1: https://www.youtube.com/watch?v=video_id | Published: 2021-10-16 08:00:07
+Video Title 2: https://www.youtube.com/watch?v=video_id | Published: 2021-10-15 08:00:39
+
+******** PROGRAMMING ********
+YouTube_Channel2
+Video Title 1: https://www.youtube.com/watch?v=video_id | Published: 2021-10-15 06:11:01
+
+YouTube_Channel3
+No new videos uploaded 
