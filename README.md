@@ -1,6 +1,6 @@
 # YouTube Channels Tracker
 
-This fun project is created to fetch most recent videos for all the youtube channels that I follow. Instead of going to each channel and look for latest videos, we can run the "main.py" file and it returns the text file with most recent videos from all the channels. The text file will be stored in the "out" folder.
+This fun project is created to fetch most recent videos for all the youtube channels that I follow. Instead of going to each channel and look for latest videos, I can run the "main.py" file and it returns the text file with most recent videos from all the channels. The text file will be stored in the "out" folder.
 
 ## High Level Design
 
@@ -26,6 +26,8 @@ This fun project is created to fetch most recent videos for all the youtube chan
 2. pytz
 3. datetime
 4. os
+5. pathlib
+6. json
 
 Sample format for "CHANNEL_CATEGORIES" constant:
 
