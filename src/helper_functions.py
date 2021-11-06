@@ -1,6 +1,8 @@
 import os
+from pathlib import Path
 from datetime import datetime, timedelta
 import pytz
+import json
 import constants
 
 # Write content to text file and place in a folder
@@ -39,4 +41,24 @@ def convert_to_local_datetime(utc_datetime_str):
 
 # Converts and returns local datetime to local datetime string
 def convert_to_local_datetime_string(local_datetime):
-    return local_datetime.strftime(constants.LOCAL_DATE_TIME_FORMAT)   
+    return local_datetime.strftime(constants.LOCAL_DATE_TIME_FORMAT)
+
+# Get file path
+def get_file_path(file_rel_path):
+    return (Path(__file__).parent / file_rel_path).resolve()
+
+# Check if file exists
+def is_file_exists(file_path):
+    return file_path.is_file()
+
+# Read json from file and convert to dictionary
+def read_from_json_file(file_path):
+    data = {}
+    with open(file_path, "r") as read_file:
+        data = json.load(read_file)
+    return data
+
+# Write dictionary to json file
+def write_to_json_file(dict_obj, file_path):
+    with open(file_path, "w") as write_file:
+        json.dump(dict_obj, write_file)

@@ -27,6 +27,17 @@ def get_playlist_id(channel_id, playlist_name):
        playlist_id = response['items'][0]['contentDetails']['relatedPlaylists'][playlist_name]
     return playlist_id
 
+# Get all playlist Ids for a given channel category
+def get_all_playlist_ids(channel_list, playlist_id_map):
+    playlist_keys = playlist_id_map.keys()
+    for channel in channel_list:
+        channel_id = channel_list[channel]
+        if channel_id not in playlist_keys:
+            uploads_playlist_id = get_playlist_id(channel_id, 'uploads')
+            if uploads_playlist_id:
+                playlist_id_map[channel_id] = uploads_playlist_id
+    return playlist_id_map
+
 # Get most recent videos for a given playlist Id
 def get_recent_videos(playlist_id):
     response = fetch_videos(playlist_id, constants.VIDEOS_PER_CHANNEL)
@@ -59,11 +70,12 @@ def get_recent_published_videos(playlist_id):
 # Get latest videos per channel in a given channel category
 # Example: Programming Channel Category => Programming Channel1, Programming Channel2
 # This function will return videos for both Programming Channel1 & Programming Channel2
-def get_channel_category_videos(channel_category):
+def get_channel_category_videos(channel_list, uploads_playlist_map):
     channel_category_videos = {}
-    for channel in channel_category:
-        channel_id = channel_category[channel]
-        uploads_playlist_id = get_playlist_id(channel_id, 'uploads')
+    for channel in channel_list:
+        channel_id = channel_list[channel]
+        #uploads_playlist_id = get_playlist_id(channel_id, 'uploads')
+        uploads_playlist_id = uploads_playlist_map[channel_id]
         # print("Uploads Playlist Id: ", uploads_playlist_id)
         if uploads_playlist_id:
             videos_list = get_recent_published_videos(uploads_playlist_id)

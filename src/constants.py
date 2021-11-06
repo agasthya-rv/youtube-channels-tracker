@@ -3,8 +3,11 @@ CHANNELS_URL = 'https://www.googleapis.com/youtube/v3/channels'
 PLAYLIST_URL = 'https://www.googleapis.com/youtube/v3/playlistItems'
 YOUTUBE_URL = 'https://www.youtube.com/'
 API_KEY = 'Secret! Do not ask me!'
+
+# Other Constants
 VIDEOS_PER_CHANNEL = 25
-VIDEOS_TIME_DELTA = 36 # In hours
+VIDEOS_TIME_DELTA = 48 # In hours
+JSON_FILE_PATH = '../data/channels_playlistIds.json'
 MY_TIME_ZONE = 'US/Eastern'
 LOCAL_DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 

@@ -14,11 +14,18 @@ This fun project is created to fetch most recent videos for all the youtube chan
 ## Required Configuration
 
 1. Get an YouTube API key and set it in the "constants.py" file (constant = API_KEY)
-2. Required python modules (requests, os, datetime, pytz)
+2. Install external python modules (requests, pytz) using pip
 3. Set all the channels in the "constants.py" file (constant = CHANNEL_CATEGORIES)
 4. Set the number of videos to be fetched from YouTube API in "constants.py" file (constant = VIDEOS_PER_CHANNEL)
 5. Set the time delta to return the most recently uploaded videos from that time delta (constant = VIDEOS_TIME_DELTA)
 6. Set the local time zone to use with time delta (constant = MY_TIME_ZONE)
+
+## Python Modules
+
+1. requests
+2. pytz
+3. datetime
+4. os
 
 Sample format for "CHANNEL_CATEGORIES" constant:
 
@@ -40,10 +47,10 @@ Sample format for "CHANNEL_CATEGORIES" constant:
 
 1. Feature 1: Return the video uploaded date in the output text file
 2. Feature 2: Setup time delta in the "constants.py" file. Return the vidoes that were uploaded only after that time delta
+3. Feature 3: Make a call to get "Uploads PlaylistId", only if it is a newly added channel in the "CHANNEL_CATEGORIES" constant
 
 ## Pending Enhancements
 
-1. Feature 3: Make a call to get "Uploads PlaylistId", only if it is a newly added channel in the "CHANNEL_CATEGORIES" constant
-2. Feature 4: Write the output to an HTML file instead of a text file
-3. Feature 5: Add Exception Handling
-4. Feature 6: Add Unit Tests
+1. Feature 1: Write the output to an HTML file instead of a text file
+2. Feature 2: Add Exception Handling
+3. Feature 3: Add Unit Tests
